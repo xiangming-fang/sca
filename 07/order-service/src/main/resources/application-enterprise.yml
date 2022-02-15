@@ -4,14 +4,16 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.1.5:8848
+        server-addr: 10.100.51.65:8848,10.100.51.65:8849,10.100.51.65:8850
         username: nacos
         password: nacos
 server:
   port: 9000
-warehouse-service: #服务提供者的微服务id
+#服务提供者的微服务id
+warehouse-service:
   ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #设置对应的负载均衡类
+    #设置对应的负载均衡类
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 feign:
   compression:
     request:

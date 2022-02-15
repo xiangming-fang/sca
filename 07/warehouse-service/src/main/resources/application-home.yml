@@ -4,7 +4,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.1.5:8848 #nacos服务器地址
+        server-addr: 192.168.1.5:8848,192.168.1.5:8849,192.168.1.5:8850 #nacos服务器地址
         username: nacos #用户名密码
         password: nacos
 server:
