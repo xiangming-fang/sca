@@ -1,6 +1,8 @@
 package com.lagou.warehouseservice.controller;
 
 import com.lagou.warehouseservice.dto.Stock;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,6 +11,9 @@ import java.util.Map;
 //仓储服务控制器
 @RestController
 public class WarehouseController {
+
+    Logger log = LoggerFactory.getLogger(WarehouseController.class);
+
     /**
      * 查询对应skuId的库存状况
      * @param skuId skuId
@@ -16,6 +21,7 @@ public class WarehouseController {
      */
     @GetMapping("/stock")
     public Stock getStock(Long skuId){
+        log.info("进来了,是我");
         Map result = new HashMap();
         Stock stock = null;
         if(skuId == 1101l){
