@@ -8,4 +8,4 @@ spring:
         username: nacos #用户名密码
         password: nacos
 server:
-  port: 8000
+  port: 9000

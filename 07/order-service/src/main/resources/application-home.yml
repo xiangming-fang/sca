@@ -8,7 +8,7 @@ spring:
         username: nacos
         password: nacos
 server:
-  port: 9000
+  port: 8000
 warehouse-service: #服务提供者的微服务id
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #设置对应的负载均衡类
