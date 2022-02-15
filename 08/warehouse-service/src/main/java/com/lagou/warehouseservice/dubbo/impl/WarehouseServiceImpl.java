@@ -7,8 +7,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
+
 @DubboService
 public class WarehouseServiceImpl implements WarehouseService {
+
+    @Override
     public Stock getStock(Long skuId){
         Map result = new HashMap();
         Stock stock = null;
@@ -24,5 +27,10 @@ public class WarehouseServiceImpl implements WarehouseService {
             //演示案例，暂不考虑无对应skuId的情况
         }
         return stock;
+    }
+
+    @Override
+    public String getMsg(){
+        return "Spring Cloud Alibaba,I love you \n" + "hello Dubbo";
     }
 }

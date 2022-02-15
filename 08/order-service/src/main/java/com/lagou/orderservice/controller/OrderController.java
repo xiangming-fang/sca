@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RestController
 public class OrderController {
+
     @DubboReference
     private WarehouseService warehouseService;
 
@@ -40,5 +41,10 @@ public class OrderController {
             result.put("message", "商品库存数量不足");
         }
         return result;
+    }
+
+    @GetMapping("/getMsg")
+    public String getMsg(){
+        return warehouseService.getMsg();
     }
 }
