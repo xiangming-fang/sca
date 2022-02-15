@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: test-service #应用/微服务名字
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.100.51.65:8848,10.100.51.65:8849,10.100.51.65:8850 #nacos服务器地址
+        username: nacos #用户名密码
+        password: nacos
+server:
+  port: 8001 #端口号
