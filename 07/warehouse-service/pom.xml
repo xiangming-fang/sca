@@ -59,6 +59,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>warehouse-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
