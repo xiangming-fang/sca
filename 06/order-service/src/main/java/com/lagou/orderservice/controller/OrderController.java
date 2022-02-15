@@ -34,14 +34,14 @@ public class OrderController {
         return ret;
     }
 
-    // ribbion 通过代码实现负载均衡
+    // ribbon 通过代码实现负载均衡
     private Map createOrderByCode(Long skuId,Long salesQuantity){
         Map result = new LinkedHashMap();
         ServiceInstance serviceInstance = loadBalancerClient.choose("warehouse-service");
         String host = serviceInstance.getHost();
         int port = serviceInstance.getPort();
         Stock restTemplateForObject = restTemplate.getForObject("http://" + host + ":" + port + "/stock?skuId=" + skuId, Stock.class);
-        System.out.println("ribbion 代码模式负载均衡通过restTemplate通信之后，返回结果：" + restTemplateForObject);
+        System.out.println("ribbon 代码模式负载均衡通过restTemplate通信之后，返回结果：" + restTemplateForObject);
         if(salesQuantity <= restTemplateForObject.getQuantity()){
             //创建订单相关代码，此处省略
             //CODE=SUCCESS代表订单创建成功
@@ -57,11 +57,11 @@ public class OrderController {
         return result;
     }
 
-    // ribbion 通过注解实现负载均衡
+    // ribbon 通过注解实现负载均衡
     private Map createOrderByAnnotation(Long skuId,Long salesQuantity){
         Map result = new LinkedHashMap();
         Stock restTemplateForObject = restTemplate.getForObject("http://warehouse-service/stock?skuId=" + skuId, Stock.class);
-        System.out.println("ribbion 注解模式负载均衡通过restTemplate通信之后，返回结果：" + restTemplateForObject);
+        System.out.println("ribbon 注解模式负载均衡通过restTemplate通信之后，返回结果：" + restTemplateForObject);
         if(salesQuantity <= restTemplateForObject.getQuantity()){
             //创建订单相关代码，此处省略
             //CODE=SUCCESS代表订单创建成功
