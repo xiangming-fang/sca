@@ -1,6 +1,6 @@
 spring:
   application:
-    name: test-service #应用/微服务名字
+    name: video-service #应用/微服务名字
   cloud:
     nacos:
       discovery:
@@ -8,4 +8,4 @@ spring:
         username: nacos #用户名密码
         password: nacos
 server:
-  port: 8001 #端口号
+  port: 9003 #端口号
