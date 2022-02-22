@@ -1,0 +1,21 @@
+[
+
+  {
+
+    "resource":"/test_flow_rule",
+
+    "limitApp":"default",
+
+    "grade":1,
+
+    "count":2,
+
+    "strategy":0,
+
+    "controlBehavior":0,
+
+    "clusterMode":false
+
+  }
+
+]

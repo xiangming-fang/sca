@@ -1,0 +1,17 @@
+[{
+
+    "resource": "createOrder", #自定义资源名
+
+    "limitApp": "default", #命名空间
+
+    "grade": 0, #0-慢调用比例 1-异常比例 2-异常数
+
+    "count": 100, #最大RT 100毫秒执行时间
+
+    "timeWindow": 5, #时间窗口5秒
+
+    "minRequestAmount": 1, #最小请求数
+
+    "slowRatioThreshold": 0.1 #比例阈值
+
+}]

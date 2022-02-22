@@ -1,0 +1,9 @@
+[{
+    "resource": "createOrder",
+    "limitApp": "default",
+    "grade": 0,
+    "count": 100,
+    "timeWindow": 5,
+    "minRequestAmount": 1,
+    "slowRatioThreshold": 0.1
+}]

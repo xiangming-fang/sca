@@ -1,0 +1,21 @@
+[
+
+  {
+
+    "resource":"/test_flow_rule", #资源名，说明对那个URI进行流控
+
+    "limitApp":"default",  #命名空间，默认default
+
+    "grade":1, #类型 0-线程 1-QPS
+
+    "count":2, #超过2个QPS限流将被限流
+
+    "strategy":0, #限流策略: 0-直接 1-关联 2-链路
+
+    "controlBehavior":0, #控制行为: 0-快速失败 1-WarmUp 2-排队等待
+
+    "clusterMode":false #是否集群模式
+
+  }
+
+]
