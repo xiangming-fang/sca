@@ -16,11 +16,11 @@ import javax.annotation.Resource;
  */
 @Service
 public class SampleService {
-    @SentinelResource(value = "createOrder",blockHandler = "createOrderBlockHandler")
     /**
      * 模拟创建订单业务
      * 抛出IllegalStateException异常用于模拟业务逻辑执行失败的情况
      */
+    @SentinelResource(value = "createOrder",blockHandler = "createOrderBlockHandler")
     public void createOrder() throws IllegalStateException{
         try {
             //模拟处理业务逻辑需要101毫秒
@@ -30,6 +30,7 @@ public class SampleService {
         }
         System.out.println("订单已创建");
     }
+
     public void createOrderBlockHandler(BlockException e) throws IllegalStateException{
         String msg = null;
         if(e instanceof FlowException){//限流异常
