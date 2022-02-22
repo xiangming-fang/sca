@@ -20,7 +20,8 @@ public class SampleService {
      * 模拟创建订单业务
      * 抛出IllegalStateException异常用于模拟业务逻辑执行失败的情况
      */
-    @SentinelResource(value = "createOrder",blockHandler = "createOrderBlockHandler")
+    @SentinelResource(value = "createOrder",
+            blockHandler = "createOrderBlockHandler")
     public void createOrder() throws IllegalStateException{
         try {
             //模拟处理业务逻辑需要101毫秒
