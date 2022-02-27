@@ -13,7 +13,7 @@ seata:
       my_test_tx_group: default
     grouplist:
 #      Seata-Server服务的IP地址与端口
-      default: 192.168.31.107:8091
+      default: localhost7:8091
     enable-degrade: false
     disable-global-transaction: false
 #    Nacos配置中心信息
@@ -21,7 +21,7 @@ seata:
     type: nacos
     nacos:
       namespace:
-      serverAddr: 192.168.31.10:8848
+      serverAddr: localhost:8848
       group: SEATA_GROUP
       username: nacos
       password: nacos
@@ -31,7 +31,7 @@ seata:
     type: nacos
     nacos:
       application: seata-server
-      server-addr: 192.168.31.10:8848
+      server-addr: localhost:8848
       group : SEATA_GROUP
       namespace:
       username: nacos
@@ -43,7 +43,7 @@ spring:
     name: rm-order
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.31.103:3306/seata-order?useInformationSchema=false
+    url: jdbc:mysql://localhost3:3306/seata-order?useInformationSchema=false
     username: root
     password: root
   cloud:
@@ -51,7 +51,7 @@ spring:
       discovery:
         username: nacos
         password: nacos
-        server-addr: 192.168.31.10:8848
+        server-addr: localhost:8848
   jpa:
     show-sql: true
 server:
