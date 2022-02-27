@@ -4,7 +4,7 @@ spring:
   cloud:
     sentinel: #Sentinel Dashboard通信地址
       transport:
-        dashboard: 192.168.31.10:9100
+        dashboard: localhost:8848,localhost:8849,localhost:8850
       eager: true #取消控制台懒加载
       datasource:
         flow:
@@ -26,7 +26,7 @@ spring:
             username: nacos
             password: nacos
     nacos: #Nacos通信地址
-      server-addr: 192.168.31.10:8848
+      server-addr: localhost:8848,localhost:8849,localhost:8850
       username: nacos
       password: nacos
   jackson:
