@@ -4,7 +4,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.31.10:8848
+        server-addr: localhost:8848,localhost:8849,localhost:8850
         username: nacos
         password: nacos
   sleuth:
@@ -13,7 +13,7 @@ spring:
       rate: 10000 #每秒数据采集量，最多n条/秒Trace
   zipkin:
     #设置zipkin服务端地址
-    base-url: http://localhost:9411
+    base-url: http://localhost:9412
   application:
     name: b-service
 logging:

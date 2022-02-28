@@ -10,7 +10,7 @@ public class User {
     @Id
     private Integer userId;
     private String username;
-    private String password;
+    private String pw;
     private String grade;
 
     public Integer getUserId() {
@@ -30,11 +30,11 @@ public class User {
     }
 
     public String getPassword() {
-        return password;
+        return pw;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String pw) {
+        this.pw = pw;
     }
 
     public String getGrade() {

@@ -1,6 +1,4 @@
-#服务端口
-server:
-  port: 8088
+
 spring:
   application:
     name: order-service #微服务id
@@ -10,9 +8,11 @@ spring:
     nacos:
       config: #这里配置的是Nacos配置中心
         file-extension: yml #指定文件扩展名
-        server-addr: 10.100.51.65:8848
+        server-addr: localhost:8848,localhost:8849,localhost:8850
         username: nacos
         password: nacos
 logging:
   level:
     root: debug
+server:
+  port: 9201

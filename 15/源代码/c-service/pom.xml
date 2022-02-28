@@ -84,6 +84,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>a-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

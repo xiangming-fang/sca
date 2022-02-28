@@ -4,7 +4,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.1.5:8848,192.168.1.5:8849,192.168.1.5:8850
+        server-addr: localhost:8848,localhost:8849,localhost:8850
         username: nacos
         password: nacos
 server:
@@ -13,4 +13,4 @@ dubbo:
   application:
     name: order-service-dubbo
   registry:
-    address: nacos://192.168.1.5:8848,nacos://192.168.1.5:8849,nacos://192.168.1.5:8850
+    address: nacos://localhost:8848,nacos://localhost:8849,nacos://localhost:8850

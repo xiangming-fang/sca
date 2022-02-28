@@ -91,6 +91,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>b-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
