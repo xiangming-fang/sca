@@ -51,13 +51,13 @@
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-all</artifactId>
-            <version>1.4.0</version>
+            <version>1.4.2</version>
         </dependency>
         <!--seata与spring boot starter-->
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-spring-boot-starter</artifactId>
-            <version>1.4.0</version>
+            <version>1.4.2</version>
         </dependency>
         <!--JDBC驱动-->
         <dependency>
