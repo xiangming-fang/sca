@@ -6,7 +6,7 @@ seata:
     vgroup-mapping:
       my_test_tx_group: default
     grouplist:
-      default: localhost7:8091
+      default: localhost:8091
     enable-degrade: false
     disable-global-transaction: false
   config:
@@ -17,7 +17,6 @@ seata:
       group: SEATA_GROUP
       username: nacos
       password: nacos
-      cluster: default
   registry:
     type: nacos
     nacos:
@@ -33,9 +32,9 @@ spring:
     name: tm-mall
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost3:3305/seata-mall?useInformationSchema=false
+    url: jdbc:mysql://localhost:3306/seata-mall?useInformationSchema=false
     username: root
-    password: root
+    password: 123456
   cloud:
     nacos:
       discovery:

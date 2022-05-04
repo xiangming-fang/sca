@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RmOrderApplication {
+public class RmPointApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RmOrderApplication.class, args);
+        SpringApplication.run(RmPointApplication.class, args);
     }
 
 }

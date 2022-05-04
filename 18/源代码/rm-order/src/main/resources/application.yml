@@ -1,22 +1,22 @@
-#seata配置
+# seata配置
 seata:
-#  开启seata分布式事务
+  # 开启seata分布式事务
   enabled: true
-#  事务服务分组名,与naocs一致
+  # 事务服务分组名,与naocs一致
   tx-service-group: my_test_tx_group
-#  是否启用数据库代理
+  # 是否启用数据库代理
   enable-auto-data-source-proxy: true
-#  事务服务配置
+  # 事务服务配置
   service:
     vgroup-mapping:
-#      事务分组对应集群名称
+      # 事务分组对应集群名称
       my_test_tx_group: default
     grouplist:
-#      Seata-Server服务的IP地址与端口
-      default: localhost7:8091
+      # Seata-Server服务的IP地址与端口
+      default: 127.0.0.1:8091
     enable-degrade: false
     disable-global-transaction: false
-#    Nacos配置中心信息
+  # Nacos配置中心信息
   config:
     type: nacos
     nacos:
@@ -25,8 +25,8 @@ seata:
       group: SEATA_GROUP
       username: nacos
       password: nacos
-      cluster: default
-#      Nacos注册中心信息
+
+  # Nacos注册中心信息
   registry:
     type: nacos
     nacos:
@@ -43,9 +43,9 @@ spring:
     name: rm-order
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost3:3306/seata-order?useInformationSchema=false
+    url: jdbc:mysql://localhost:3306/seata-order?useInformationSchema=false&serverTimezone=Asia/Shanghai
     username: root
-    password: root
+    password: 123456
   cloud:
     nacos:
       discovery:
